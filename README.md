@@ -5,12 +5,13 @@ In this tutorial, we will explore how to build a Rock-Paper-Scissors game using 
 ## Key Criteria
 
 To ensure the integrity and fairness of the game, we must meet the following criteria:
+
 ...
 
 1. No Prior Knowledge: Jack and Jill should not know each other's choices before submission
 2. Immutable Choices: Neither Jack nor Jill can change their choice after submission
 3. Tamper-Proof: Third parties cannot tamper with the choices
-4 Determine Winner: The smart contract can determine the winner based on the choices
+4. Determine Winner: The smart contract can determine the winner based on the choices
 
 ...
 
@@ -23,6 +24,7 @@ To achieve these criteria, we utilize a cryptographic function called a hash fun
 1. Deterministic: Given the same input, the function always produces the same hash.
 2. Unique: Different inputs produce different hashes.
 3. Non-reversible: Given a hash, it’s computationally impossible to determine the original input.
+
 ...
 
 ## Implementing the Protocol
@@ -46,3 +48,21 @@ To achieve these criteria, we utilize a cryptographic function called a hash fun
 3. Determine Result:
 
 * After both parties reveal their choices, the smart contract computes the result and determines the winner.
+
+## Code Implementation
+
+Let's start by defining the smart contract and its key components.
+
+## Step 1: Define State Variables and Choices
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract Game {
+    bytes32 public constant ROCK = "ROCK";
+    bytes32 public constant PAPER = "PAPER";
+    bytes32 public constant SCISSORS = "SCISSORS";
+
+    mapping(address => bytes32) public choices;
+}
+
