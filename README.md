@@ -6,26 +6,18 @@ In this tutorial, we will explore how to build a Rock-Paper-Scissors game using 
 
 To ensure the integrity and fairness of the game, we must meet the following criteria:
 
-...
-
 1. No Prior Knowledge: Jack and Jill should not know each other's choices before submission
 2. Immutable Choices: Neither Jack nor Jill can change their choice after submission
 3. Tamper-Proof: Third parties cannot tamper with the choices
 4. Determine Winner: The smart contract can determine the winner based on the choices
 
-...
-
 ## Using Cryptographic Hash Functions
 
 To achieve these criteria, we utilize a cryptographic function called a hash function. Hash functions are one-way functions that map data to a fixed-size number with the following properties:
 
-...
-
 1. Deterministic: Given the same input, the function always produces the same hash.
 2. Unique: Different inputs produce different hashes.
 3. Non-reversible: Given a hash, it’s computationally impossible to determine the original input.
-
-...
 
 ## Implementing the Protocol
 
